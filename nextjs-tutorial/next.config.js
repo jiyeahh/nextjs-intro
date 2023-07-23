@@ -18,7 +18,12 @@ const nextConfig = {
     return[{
       source:"/api/movies",
       destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
-    }]
+    },
+    {
+      source: "/api/movies/:id",
+      destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}`,
+    },
+  ]
   }
 };
 //redirect는 source 페이지로 가면 destination으로 이동 뒤의 path는 catch를 위함
